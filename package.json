@@ -1,0 +1,28 @@
+{
+  "name": "escola",
+  "version": "1.0.0",
+  "description": "Site E Sistema de notas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElGualberton/escola.git"
+  },
+  "author": "ElGualberton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElGualberton/escola/issues"
+  },
+  "homepage": "https://github.com/ElGualberton/escola#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "consign": "^0.1.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "mysql": "^2.16.0",
+    "request": "^2.88.0"
+  }
+}
