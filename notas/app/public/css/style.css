@@ -7,7 +7,7 @@ a:hover{
 	color:#000;
 }
 
-.turma_wrapper{
+.Stl_wrapper{
 	background-color: #FFF;
 	padding:15px;
 	margin-bottom:15px;
@@ -18,23 +18,23 @@ a:hover{
 	background:#FFF;
 }
 
-.turma_autor{
+.Stl_num1{
 	color: #FF7C26;
 	display: block;
 }
 
-.turma_titulo{
+.Stl_num2{
 	color:#000;
 	font-size:22px;
 	text-decoration: none;
 }
 
-.turma_data{
+.Stl_num3{
 	color:#727272;
 	display: block;
 }
 
-.turma_resumo{
+.Stl_num4{
 	color:#333;
 	margin-right:10px;
 }

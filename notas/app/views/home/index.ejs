@@ -46,7 +46,7 @@
 	    	<div class="row">
 	    		<div class="col-md-8">
 	    			<div class="turma_wrapper">
-		    			<span class="turma_autor"><%= turmas[0].autor %></span>
+		    			<span class="Tur_ano"><%= turmas[0].autor %></span>
 		    			<a href="turma?id_turma=<%=turmas[0].id_turma%>" class="turma_titulo"><%= turmas[0].titulo %></a>
 		    			<span class="turma_data"><%= turmas[0].data_criacao %></span>
 		    			<br />
@@ -58,7 +58,7 @@
 
 	    		<div class="col-md-4">
 	    			<div class="turma_wrapper">
-		    			<span class="turma_autor"><%= turmas[1].autor %></span>
+		    			<span class="Tur_ano"><%= turmas[1].autor %></span>
 		    			<a href="turma?id_turma=<%=turmas[1].id_turma%>" class="turma_titulo"><%= turmas[1].titulo %></a>
 		    			<span class="turma_data"><%= turmas[1].data_criacao %></span>
 		    			<br />
@@ -73,7 +73,7 @@
 				<% for(var i = 2; i < turmas.length; i++) { %>
 					<div class="col-md-4">
 						<div class="turma_wrapper">
-							<span class="turma_autor"><%= turmas[i].autor %></span>
+							<span class="Tur_ano"><%= turmas[i].autor %></span>
 							<a href="turma?id_turma=<%=turmas[i].id_turma%>" class="turma_titulo"><%= turmas[i].titulo %></a>
 							<span class="turma_data"><%= turmas[i].data_criacao %></span>
 							<br />

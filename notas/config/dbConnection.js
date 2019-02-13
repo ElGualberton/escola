@@ -5,7 +5,7 @@ var connMySQL = function(){
         host : 'localhost',
         user : 'salvum104',
         password : 'arcoiris',
-        database : 'portal_turmas'
+        database : 'escola'
     });
 }
 

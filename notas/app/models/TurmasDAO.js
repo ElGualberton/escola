@@ -1,7 +1,7 @@
 function TurmasDAO(connection){
     this._connection = connection;
 }
-
+  
 TurmasDAO.prototype.getturmas = function(callback){
     this._connection.query('select * from turmas order by data_criacao desc', callback);
 }

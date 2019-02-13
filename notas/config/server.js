@@ -1,3 +1,4 @@
+var dotenv = require('dotenv').config();
 var express = require('express');
 var consign = require('consign');
 var bodyParser = require('body-parser');

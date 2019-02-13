@@ -2,34 +2,32 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-
-		<title>Portal de notícias</title>
-		
+		<title>Lista de Turmas</title>
 		<!-- JQuery -->
 		<script src="js/jquery-2.2.1.js"></script>
-
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	
 		<!-- incluindo css -->
 		<link href="css/style.css" rel="stylesheet">
-
 		<!-- favicon -->
 		<link rel="shortcut icon" href="images/favicon.ico" />
 	</head>
 
 	<body>
-
 		<nav class="navbar navbar-default navbar-static-top">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<button type="button" 
+							class="navbar-toggle collapsed" 
+							data-toggle="collapse" 
+							data-target="#navbar" 
+							aria-expanded="false" 
+							aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					
 					<img src="images/logo.png" />
 				</div>
 
@@ -40,29 +38,27 @@
 				</div>
 			</div>
 		</nav>
-
-	    <div class="container">
+		<div class="container">
 			<% if(turmas.length > 0) { %>
 				<% for(var i = 0; i < turmas.length; i++) {%>
 					<div class="row">
 						<div class="col-md-12">
-							<div class="turma_wrapper">
-								<span class="turma_autor"><%=turmas[i].autor%></span>
-								<a href="turma?id_turma=<%=turmas[i].id_turma%>" 
-								   class="turma_titulo"><%=turmas[i].titulo%></a>
-								<span class="turma_data"><%=turmas[i].data_turma%></span>
+							<div class="Stl_wrapper">
+								<span class="Stl_num1"><%=turmas[i].Tur_ano%></span>
+								<a href="turma?id_turma=<%=turmas[i].Tur_ID%>" 
+									class="Stl_num2"><%=turmas[i].Tur_ID%>
+								</a>
+								<span class="Stl_num3"><%=turmas[i].Tur_Serie%></span>
 								<br />
-								<p class="turma_resumo">
-										<%=turmas[i].turma%>
+								<p class="Stl_num4">
+									<%=turmas[i].Tur_Letra%>
 								</p>
 							</div>
 						</div>
 					</div>
 				<% } %>
 			<% } %>
-	    </div>
-	
+		</div>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	
 	</body>
 </html>
