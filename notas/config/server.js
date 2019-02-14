@@ -1,4 +1,4 @@
-var dotenv = require('dotenv').config();
+require('dotenv').config();
 var express = require('express');
 var consign = require('consign');
 var bodyParser = require('body-parser');
@@ -11,6 +11,8 @@ app.set('views', './notas/app/views');
 app.use(express.static('./notas/app/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressValidator());
+
+console.log('Valor Atual ' + process.env.APP_CRUD);
 
 consign()
     .include('notas/app/routes')

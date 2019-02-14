@@ -32,18 +32,41 @@
 				</div>
 			</div>
 		</nav>
+			<% if(validacao.length > 0) {%>
+				<div class="alert alert-danger">
+					<strong>Atenção!</strong>
+					<ul>
+						<% for(var i = 0; i < validacao.length; i++){ %>
+							<li> <%=validacao[i].msg%></li>
+						<% } %>
+					</ul>
+				</div>
+			<% } %>
 	    <div class="container">
-	    	<div class="row">
-	    		<div class="col-md-12">
-	    			<div class="Stl_wrapper">
-		    			<span class="Stl_num1"><%=turma[0].Tur_ano%></span>
-		    			<span class="Stl_num2"><%=turma[0].Tur_ID%></span>
-		    			<span class="Stl_num3"><%=turma[0].Tur_Serie%></span>
-		    			<span class="Stl_num4"><%=turma[0].Tur_Letra%></span>
-		    		</div>
-		    	</div>
-	    	</div>
-	    </div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="Stl_wrapper">
+			<% if(validacao.length > 0) {%>
+						<% switch(process.env.APP_CRUD) { %>
+							<% case 'c': %>
+								<%=TESTE;%>
+							<% case 'r': %>
+								<%=TESTE;%>
+							<% case 'u': %>
+								<%=TESTE;%>
+							<% case 'd': %>
+								<%=TESTE;%>
+							<% defalt: %>
+								<%=turma[0].Tur_ID;%>
+						<% } %>
+						<span class="Stl_num1"><%=turma[0].Tur_ano%></span>
+						<span class="Stl_num2"><%=turma[0].Tur_ID%></span>
+						<span class="Stl_num3"><%=turma[0].Tur_Serie%></span>
+						<span class="Stl_num4"><%=turma[0].Tur_Letra%></span>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	</body>
 </html>

@@ -4,7 +4,7 @@ module.exports.formulario_inclusao_turma = function(application, req, res){
 
 module.exports.turmas_salvar = function(application, req, res){
     var turma = req.body;
-    console.log(turma);
+    console.log('Valor de turma ' + turma);
     req.assert('titulo','Titulo é Obrigatorio').notEmpty();
     req.assert('resumo','Resumo é Obrigatorio').notEmpty();
     req.assert('resumo','Resumo entre 10 e 100 caracs').len(10, 100);
@@ -27,8 +27,8 @@ module.exports.turmas_salvar = function(application, req, res){
         res.render("admin/form_add_turma", {validacao : erros, turma : turma});
         return;
     }
-    var connection = application.config.dbConnection();
-    var turmasModel = new application.app.models.TurmasDAO(connection);
+    var connection = application.notas.config.dbConnection();
+    var turmasModel = new application.notas.app.models.TurmasDAO(connection);
     turmasModel.salvarturma(turma, function(error, result){
         res.redirect('/turmas');
     });
