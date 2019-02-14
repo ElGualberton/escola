@@ -32,37 +32,20 @@
 				</div>
 			</div>
 		</nav>
-			<% if(validacao.length > 0) {%>
-				<div class="alert alert-danger">
-					<strong>Atenção!</strong>
-					<ul>
-						<% for(var i = 0; i < validacao.length; i++){ %>
-							<li> <%=validacao[i].msg%></li>
-						<% } %>
-					</ul>
-				</div>
-			<% } %>
+
 	    <div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="Stl_wrapper">
-			<% if(validacao.length > 0) {%>
-						<% switch(process.env.APP_CRUD) { %>
-							<% case 'c': %>
-								<%=TESTE;%>
-							<% case 'r': %>
-								<%=TESTE;%>
-							<% case 'u': %>
-								<%=TESTE;%>
-							<% case 'd': %>
-								<%=TESTE;%>
-							<% defalt: %>
-								<%=turma[0].Tur_ID;%>
+						<% if(process.env.APP_CRUD == 'c') {%>
+							<span class="Stl_num1"><%=turma[0].Tur_ano%></span>
+						<% } else if(process.env.APP_CRUD == 'r') {%>
+							<span class="Stl_num2"><%=turma[0].Tur_ID%></span>
+						<% } else if(process.env.APP_CRUD == 'u') {%>
+							<span class="Stl_num3"><%=turma[0].Tur_Serie%></span>
+						<% } else { %>
+							<span class="Stl_num4"><%=turma[0].Tur_Letra%></span>
 						<% } %>
-						<span class="Stl_num1"><%=turma[0].Tur_ano%></span>
-						<span class="Stl_num2"><%=turma[0].Tur_ID%></span>
-						<span class="Stl_num3"><%=turma[0].Tur_Serie%></span>
-						<span class="Stl_num4"><%=turma[0].Tur_Letra%></span>
 					</div>
 				</div>
 			</div>
