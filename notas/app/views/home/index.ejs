@@ -1,97 +1,160 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+        }
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bgimg-1 {
+            background-image: url("images/img_parallax.jpg");
+            min-height: 100%;
+        }
+        .bgimg-2 {
+            background-image: url("images/img_parallax2.jpg");
+            min-height: 400px;
+        }
+        .bgimg-3 {
+            background-image: url("images/img_parallax1.jpg");
+            min-height: 400px;
+        }
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+        h3 {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font: 20px "Lato", sans-serif;
+            color: #111;
+        }
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: scroll;
+            }
+        }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="bgimg-1">
+            <div class="caption">
+                <span class="border">COLÉGIO SALVUM</span>
+            </div>
+        </div>
+        <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+            <h3 style="text-align:center;">Primeira Seção</h3>
+            <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground 
+                content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis
+                 ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. 
+                 Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, 
+                 nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, 
+                 sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. 
+                 Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, 
+                 ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, 
+                 porta porttitor placerat leo.
+            </p>
+        </div>
+        <div class="bgimg-2">
+            <div class="caption">
+                <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+            </div>
+        </div>
+        <div style="position:relative;">
+            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+            </div>
+        </div>
+        <div class="bgimg-3">
+            <div class="caption">
+                <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+            </div>
+        </div>
+        <div style="position:relative;">
+            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+            </div>
+        </div>
+        <div class="bgimg-1">
+            <div class="caption">
+                <span class="border">COOL!</span>
+            </div>
+        </div>
 
-		<title>Portal de notícias XPTO</title>
-		
-		<!-- JQuery -->
-		<script src="js/jquery-2.2.1.js"></script>
+<!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
+        <!-- Footer Elements -->
+        <div class="container">
+            <!-- Grid row-->
+            <div class="row">
+            <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+                        <!-- Facebook -->
+                        <a class="https://fb-ic">
+                            <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="https://tw-ic">
+                            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="https://gplus-ic">
+                            <i class="fa fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="https://li-ic">
+                            <i class="fa fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="https://ins-ic">
+                            <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Pinterest-->
+                        <a class="https://pin-ic">
+                            <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+            <!-- Grid column -->
+            </div>
+        <!-- Grid row-->
+        </div>
+    <!-- Footer Elements -->
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+      <!-- Footer -->
 
-		<!-- bootstrap - link cdn -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	
-		<!-- incluindo css -->
-		<link href="css/style.css" rel="stylesheet">
-
-		<!-- favicon -->
-		<link rel="shortcut icon" href="images/favicon.ico" />
-	</head>
-
-	<body>
-
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					
-					<img src="images/logo.png" />
-				</div>
-
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/">HOME</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-
-	    <div class="container">
-	    	<div class="row">
-	    		<div class="col-md-8">
-	    			<div class="turma_wrapper">
-		    			<span class="Tur_ano"><%= turmas[0].autor %></span>
-		    			<a href="turma?id_turma=<%=turmas[0].id_turma%>" class="turma_titulo"><%= turmas[0].titulo %></a>
-		    			<span class="turma_data"><%= turmas[0].data_criacao %></span>
-		    			<br />
-		    			<p class="turma_resumo">
-		    				<%= turmas[0].resumo %>
-		    			</p>
-		    		</div>
-		    	</div>
-
-	    		<div class="col-md-4">
-	    			<div class="turma_wrapper">
-		    			<span class="Tur_ano"><%= turmas[1].autor %></span>
-		    			<a href="turma?id_turma=<%=turmas[1].id_turma%>" class="turma_titulo"><%= turmas[1].titulo %></a>
-		    			<span class="turma_data"><%= turmas[1].data_criacao %></span>
-		    			<br />
-		    			<p class="turma_resumo">
-		    				<%= turmas[1].resumo %>
-		    			</p>
-		    		</div>
-		    	</div>
-	    	</div>
-
-	    	<div class="row">
-				<% for(var i = 2; i < turmas.length; i++) { %>
-					<div class="col-md-4">
-						<div class="turma_wrapper">
-							<span class="Tur_ano"><%= turmas[i].autor %></span>
-							<a href="turma?id_turma=<%=turmas[i].id_turma%>" class="turma_titulo"><%= turmas[i].titulo %></a>
-							<span class="turma_data"><%= turmas[i].data_criacao %></span>
-							<br />
-							<p class="turma_resumo">
-								<%= turmas[i].resumo %>
-							</p>
-						</div>
-					</div>
-				<% } %>
-	    	</div>
-
-	    	<div class="row ver_mais">
-	    		<button type="button" class="btn btn-default"><a href="turmas">Ver todas as notícias</a></button>
-	    	</div>
-
-	    </div>
-	
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	
-	</body>
+    </body>
 </html>
+
+
