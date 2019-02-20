@@ -2,7 +2,12 @@
 <html lang="pt-br">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
+        <!-- incluindo css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="css/style.css" rel="stylesheet">
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+       <style>
         body, html {
             height: 100%;
             margin: 0;
@@ -60,9 +65,35 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
+		<nav class="navbar fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+                    <button type="button" 
+                        class="navbar-toggle collapsed" 
+                        data-toggle="collapse" 
+                        data-target="#navbar" 
+                        aria-expanded="false" 
+                        aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<img src="images/logo_site.png" />
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">HOME</a></li>
+						<li><a href="/">casa</a></li>
+						<li><a href="/">inicio</a></li>
+						<li><a href="/">principal</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
         <div class="bgimg-1">
             <div class="caption">
-                <span class="border">COLÉGIO SALVUM</span>
+                <span class="border"> COLÉGIO  SALVUM </span>
             </div>
         </div>
         <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
@@ -105,54 +136,57 @@
         </div>
 
 <!-- Footer -->
-    <footer class="page-footer font-small cyan darken-3">
-        <!-- Footer Elements -->
-        <div class="container">
-            <!-- Grid row-->
-            <div class="row">
-            <!-- Grid column -->
-                <div class="col-md-12 py-5">
-                    <div class="mb-5 flex-center">
-                        <!-- Facebook -->
-                        <a class="https://fb-ic">
-                            <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <!-- Twitter -->
-                        <a class="https://tw-ic">
-                            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <!-- Google +-->
-                        <a class="https://gplus-ic">
-                            <i class="fa fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <!--Linkedin -->
-                        <a class="https://li-ic">
-                            <i class="fa fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <!--Instagram-->
-                        <a class="https://ins-ic">
-                            <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                        </a>
-                        <!--Pinterest-->
-                        <a class="https://pin-ic">
-                            <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
-                        </a>
+        <footer class="page-footer font-small cyan darken-3">
+            <!-- Footer Elements -->
+            <div class="container">
+                <!-- Grid row-->
+                <div class="row">
+                <!-- Grid column -->
+                    <div class="col-md-12 py-5">
+                        <div class="mb-5 flex-center">
+                            <!-- Facebook -->
+                            <a class="https://fb-ic">
+                                <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="https://tw-ic">
+                                <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!-- Google +-->
+                            <a class="https://gplus-ic">
+                                <i class="fa fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Linkedin -->
+                            <a class="https://li-ic">
+                                <i class="fa fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Instagram-->
+                            <a class="https://ins-ic">
+                                <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                            </a>
+                            <!--Pinterest-->
+                            <a class="https://pin-ic">
+                                <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+                            </a>
+                        </div>
                     </div>
+                <!-- Grid column -->
                 </div>
-            <!-- Grid column -->
+            <!-- Grid row-->
             </div>
-        <!-- Grid row-->
-        </div>
-    <!-- Footer Elements -->
-    
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    
-    </footer>
+        <!-- Footer Elements -->
+        
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        
+        </footer>
       <!-- Footer -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
 
     </body>
 </html>

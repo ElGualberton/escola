@@ -7,62 +7,56 @@
 				<div class="col-md-12">
 					<div class="Stl_wrapper">
 						<% if(process.env.APP_CRUD == 'c') {%>
-
-
-
-
-							<div class="row">
-								<div class="form-group col-md-12">
-									<label for="name">Id: </label>
-									<input type="number" 
-									class="form-control Stl_num1"
-									id="Tur_ID" 
-									name="Tur_ID"
-									value="<%=turma[0].Tur_ID%>"
-									readonly>
+							<form action="/turma/salvar" method="POST">
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="name">Id: </label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_ID" 
+										name="Tur_ID">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Ano: </label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_Ano" 
+										name="Tur_Ano"
+										step=1
+										min=1 
+										max=2999
+										readonly
+										value="<%=turma[0].Tur_Ano%>">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Valor</label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_Serie" 
+										name="Tur_Serie"
+										step=1
+										min=11 
+										max=23
+										readonly
+										value="<%=turma[0].Tur_Serie%>">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Letra: </label>
+										<input type="text" 
+										class="form-control"
+										id="Tur_Letra"
+										name="Tur_Letra"
+										requerid
+										value="<%=turma[0].Tur_Letra%>"
+										>
+									</div>		
 								</div>
-								<div class="form-group col-md-4">
-									<label for="name">Ano: </label>
-									<input type="number" 
-									class="form-control Stl_num2"
-									id="Tur_Ano" 
-									name="Tur_Ano"
-									step=1
-									min=1 
-									max=2999
-									readonly
-									value="<%=turma[0].Tur_Ano%>">
-								</div>
-								<div class="form-group col-md-4">
-									<label for="name">Valor</label>
-									<input type="number" 
-									class="form-control Stl_num3"
-									id="Tur_Serie" 
-									name="Tur_Serie"
-									step=1
-									min=11 
-									max=23
-									readonly
-									value="<%=turma[0].Tur_Serie%>">
-								</div>
-								<div class="form-group col-md-4">
-									<label for="name">Letra: </label>
-									<input type="text" 
-									class="form-control Stl_num4"
-									id="Tur_Letra"
-									name="Tur_Letra"
-									requerid
-									value="<%=turma[0].Tur_Letra%>"
-									>
-								</div>		
-							</div>
-						
+								<button type="submit" class="btn btn-default">Cadastrar</button>
+							</form>
+	
 
 
-
-
-
-
+							<!--
 							<div class="row">
 								<label>Ano: </label>
 								<span class="Stl_num2"><%=turma[0].Tur_Ano%></span>
@@ -79,57 +73,154 @@
 								<label>Letra: </label>
 								<span class="Stl_num4"><%=turma[0].Tur_Letra%></span>
 							</div>
+							-->
 						<% } else if(process.env.APP_CRUD == 'r') {%>
-							<div class="row">
-								<label>Ano: </label>
-								<span class="Stl_num2"><%=turma[0].Tur_Ano%></span>
-							</div>
-							<div class="row">
-								<label>Id: </label>
-								<span class="Stl_num2"><%=turma[0].Tur_ID%></span>
-							</div>
-							<div class="row">
-								<label>Serie: </label>
-								<span class="Stl_num3"><%=turma[0].Tur_Serie%></span>
-							</div>
-							<div class="row">
-								<label>Letra: </label>
-								<span class="Stl_num4"><%=turma[0].Tur_Letra%></span>
-							</div>
+							<form action="/turma/salvar" method="POST">
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="name">Id: </label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_ID" 
+										name="Tur_ID"
+										value="<%=turma[0].Tur_ID%>"
+										readonly>
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Ano: </label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_Ano" 
+										name="Tur_Ano"
+										step=1
+										min=1 
+										max=2999
+										readonly
+										value="<%=turma[0].Tur_Ano%>">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Valor</label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_Serie" 
+										name="Tur_Serie"
+										step=1
+										min=11 
+										max=23
+										readonly
+										value="<%=turma[0].Tur_Serie%>">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Letra: </label>
+										<input type="text" 
+										class="form-control"
+										id="Tur_Letra"
+										name="Tur_Letra"
+										requerid
+										value="<%=turma[0].Tur_Letra%>"
+										>
+									</div>		
+								</div>
+								<button type="submit" class="btn btn-default">Cadastrar</button>
+							</form>
 						<% } else if(process.env.APP_CRUD == 'u') {%>
-							<div class="row">
-								<label>Ano: </label>
-								<span class="Stl_num2"><%=turma[0].Tur_Ano%></span>
-							</div>
-							<div class="row">
-								<label>Id: </label>
-								<span class="Stl_num2"><%=turma[0].Tur_ID%></span>
-							</div>
-							<div class="row">
-								<label>Serie: </label>
-								<span class="Stl_num3"><%=turma[0].Tur_Serie%></span>
-							</div>
-							<div class="row">
-								<label>Letra: </label>
-								<span class="Stl_num4"><%=turma[0].Tur_Letra%></span>
-							</div>
+							<form action="/turma/salvar" method="POST">
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="name">Id: </label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_ID" 
+										name="Tur_ID"
+										value="<%=turma[0].Tur_ID%>"
+										readonly>
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Ano: </label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_Ano" 
+										name="Tur_Ano"
+										step=1
+										min=1 
+										max=2999
+										readonly
+										value="<%=turma[0].Tur_Ano%>">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Valor</label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_Serie" 
+										name="Tur_Serie"
+										step=1
+										min=11 
+										max=23
+										readonly
+										value="<%=turma[0].Tur_Serie%>">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Letra: </label>
+										<input type="text" 
+										class="form-control"
+										id="Tur_Letra"
+										name="Tur_Letra"
+										requerid
+										value="<%=turma[0].Tur_Letra%>"
+										>
+									</div>		
+								</div>
+								<button type="submit" class="btn btn-default">Cadastrar</button>
+							</form>
 						<% } else if(process.env.APP_CRUD == 'd') { %>
-							<div class="row">
-								<label>Ano: </label>
-								<span class="Stl_num2"><%=turma[0].Tur_Ano%></span>
-							</div>
-							<div class="row">
-								<label>Id: </label>
-								<span class="Stl_num2"><%=turma[0].Tur_ID%></span>
-							</div>
-							<div class="row">
-								<label>Serie: </label>
-								<span class="Stl_num3"><%=turma[0].Tur_Serie%></span>
-							</div>
-							<div class="row">
-								<label>Letra: </label>
-								<span class="Stl_num4"><%=turma[0].Tur_Letra%></span>
-							</div>
+							<form action="/turma/salvar" method="POST">
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label for="name">Id: </label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_ID" 
+										name="Tur_ID"
+										value="<%=turma[0].Tur_ID%>"
+										readonly>
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Ano: </label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_Ano" 
+										name="Tur_Ano"
+										step=1
+										min=1 
+										max=2999
+										readonly
+										value="<%=turma[0].Tur_Ano%>">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Valor</label>
+										<input type="number" 
+										class="form-control"
+										id="Tur_Serie" 
+										name="Tur_Serie"
+										step=1
+										min=11 
+										max=23
+										readonly
+										value="<%=turma[0].Tur_Serie%>">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="name">Letra: </label>
+										<input type="text" 
+										class="form-control"
+										id="Tur_Letra"
+										name="Tur_Letra"
+										requerid
+										value="<%=turma[0].Tur_Letra%>"
+										>
+									</div>		
+								</div>
+								<button type="submit" class="btn btn-default">Cadastrar</button>
+							</form>
 						<% } else { %>
 							<div class="row">
 								<label>Entre em contato com o Suporte (APP_CRUD): </label>
