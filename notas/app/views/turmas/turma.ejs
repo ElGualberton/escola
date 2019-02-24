@@ -1,11 +1,35 @@
 <% TELA = 'Turma ' + turma[0].TUR_ID %>
+<% process.env.APP_CRUD = 'D' %>
 <% include ../cabeca.ejs %>
 
 	<div class="container">
+		<% if(validacao.length > 0) { %>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-danger">
+						<strong>Atenção!</strong>
+						<ul>
+							<% for(var i = 0; i < validacao.length; i++) { %>
+								<li><%= validacao[i].msg %></li>
+							<% } %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<% } %>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="Stl_wrapper">
-					<form action="/turma/salvar" method="POST">
+					<form
+					<% if(process.env.APP_CRUD === 'R' || process.env.APP_CRUD === 'C') {%>
+						action="/turma/salvar"
+					<% } else if(process.env.APP_CRUD == 'D') {%>
+						action="/turma/deleta"
+					<% } %>	
+					method="POST">
+
+
+					<!--<form action="/turma/salvar" method="POST">-->
 						<div class="row">
 							<div class="form-group col-md-4">
 								<label for="name">Id: </label>
