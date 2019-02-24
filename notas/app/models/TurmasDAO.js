@@ -4,7 +4,7 @@ function TurmasDAO(connection){
 }
   
 TurmasDAO.prototype.getturmas = function(callback){
-    this._connection.query('select * from tb_turma order by Tur_ID desc', callback);
+    this._connection.query('select * from tb_turma order by TUR_ID', callback);
 }
 
 TurmasDAO.prototype.getturma = function(id_turma, callback){
