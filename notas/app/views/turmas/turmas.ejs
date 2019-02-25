@@ -3,9 +3,15 @@
 <% include ../cabeca.ejs %>
 
 	<div class="container">
+		<!--button type="submit" class="btn btn-default">Cadastrar</button-->
+		<div class="btn btn-default">
+			<a href="turma?id_turma=0?vvYpy=C" class="btn btn-primary active">
+				<i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i> Save
+			</a>
+		</div>
 		<% if(turmas.length > 0) { %>
 			<% for(var i = 0; i < turmas.length; i++) {%>
-				<a href="turma?id_turma=<%=turmas[i].TUR_ID%>" id="l<%=i%>">
+				<a href="turma?id_turma=<%=turmas[i].TUR_ID%>?vvYpy=A" id="l<%=i%>">
 					<div class="Stl_wrapper col-md-12">
 						<span class="Stl_num1"><label for="name">Ano:</label> <%=turmas[i].TUR_ANO%></span>
 							<% var x = turmas[i].TUR_SERIE.toString().trim().slice(1, 2);%>
