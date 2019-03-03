@@ -35,6 +35,10 @@ CREATE TABLE TB_DISCIPLINA (
 	DIS_ID int(5) not null auto_increment primary key,
     DIS_NOME varchar(40) not null
 );
+CREATE TABLE TB_SERIE (
+	SER_ID int(2) not null primary key,
+    SER_DESCRICAO varchar(40) not null
+);
 CREATE TABLE TB_NOTAS (
 	TUR_ID int(5) not null,
 	ALN_ID int(5) not null,
@@ -261,3 +265,17 @@ Insert into TB_DISCIPLINA(DIS_NOME) values ('Informática');
 Insert into TB_DISCIPLINA(DIS_NOME) values ('Inglês');
 Insert into TB_DISCIPLINA(DIS_NOME) values ('Espanhol');
 Insert into TB_DISCIPLINA(DIS_NOME) values ('Educação Artistica');
+
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (10, 'Maternal');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (11, '1º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (12, '2º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (13, '3º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (14, '4º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (15, '5º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (16, '6º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (17, '7º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (18, '8º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (19, '9º Série - Fundamental');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (21, '1º Série - Médio');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (22, '2º Série - Médio');
+Insert into TB_SERIE(SER_ID, SER_DESCRICAO) values (23, '3º Série - Médio');

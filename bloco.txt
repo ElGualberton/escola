@@ -1,2 +1,19 @@
 ypy
 http://tupiantigo.blogspot.com/2008/02/numerais.html
+
+
+
+
+
+								<input type="number" 
+								class="form-control"
+								id="TUR_SERIE" 
+								name="TUR_SERIE"
+								step=1
+								min=10 
+								max=23
+								<% if(process.env.APP_CRUD === 'R' || process.env.APP_CRUD === 'U' || process.env.APP_CRUD === 'D') {%>
+									value="<%=turma[0].TUR_SERIE%>">
+								<% } else if(process.env.APP_CRUD === 'C') {%>
+									>
+								<% } %>	
