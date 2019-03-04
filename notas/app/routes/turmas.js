@@ -4,6 +4,7 @@ module.exports = function(application){
     });
     application.get('/turma', function(req, res){
         console.log('rotas');
+        console.log(req);
         application.notas.app.controllers.turmas.turma(application, req, res)
     });
     application.post('/turma/salvar', function(req, res){

@@ -1,6 +1,14 @@
-<% TELA = 'Turma ' + turma[0].TUR_ID %>
-<% console.log(vvYpy) %>   
-<% process.env.APP_CRUD = 'D' %>
+<% if(process.env.APP_CRUD == 'C') {%>
+	<% TELA = 'Nova Turma' %>
+<% } else if(process.env.APP_CRUD == 'R') {%>
+	<% TELA = 'Consulta da Turma ' + turma[0].TUR_ID %>
+<% } else if(process.env.APP_CRUD == 'U') {%>
+	<% TELA = 'Alteração da Turma ' + turma[0].TUR_ID %>
+<% } else if(process.env.APP_CRUD == 'D') {%>
+	<% TELA = 'Exclusão da Turma ' + turma[0].TUR_ID %>
+<% } else {%>
+	<% TELA = 'Entre em contato com o Suporte' %>
+<% } %>		
 <% include ../cabeca.ejs %>
 
 	<div class="container">
@@ -22,14 +30,12 @@
 			<div class="col-md-12">
 				<div class="Stl_wrapper">
 					<form
-					<% if(process.env.APP_CRUD === 'R' || process.env.APP_CRUD === 'C') {%>
+					<% if(process.env.APP_CRUD === 'U' || process.env.APP_CRUD === 'C') {%>
 						action="/turma/salvar"
 					<% } else if(process.env.APP_CRUD == 'D') {%>
 						action="/turma/deleta"
 					<% } %>	
 					method="POST">
-
-
 					<!--<form action="/turma/salvar" method="POST">-->
 						<div class="row">
 							<div class="form-group col-md-4">
@@ -39,7 +45,11 @@
 								readonly
 								id="TUR_ID" 
 								name="TUR_ID"
-								value="<%=turma[0].TUR_ID%>">
+								<% if(process.env.APP_CRUD === 'R' || process.env.APP_CRUD === 'U' || process.env.APP_CRUD === 'D') {%>
+									value="<%=turma[0].TUR_ID%>">
+								<% } else if(process.env.APP_CRUD === 'C') {%>
+									>
+								<% } %>	
 							</div>
 						</div>	
 						<div class="row">
@@ -57,23 +67,41 @@
 								<% } else if(process.env.APP_CRUD === 'C' || process.env.APP_CRUD === 'U') {%>
 									requerid
 								<% } %>	
-								value="<%=turma[0].TUR_ANO%>">
-							</div>
+								<% if(process.env.APP_CRUD === 'R' || process.env.APP_CRUD === 'U' || process.env.APP_CRUD === 'D') {%>
+									value="<%=turma[0].TUR_ANO%>">
+								<% } else if(process.env.APP_CRUD === 'C') {%>
+									>
+								<% } %>	
+						</div>
 							<div class="form-group col-md-4">
-								<label for="name">Valor</label>
-								<input type="number" 
-								class="form-control"
+								<label for="name">Série: </label>
+
+								<select 
+								class="form-control" 
 								id="TUR_SERIE" 
 								name="TUR_SERIE"
-								step=1
-								min=10 
-								max=23
 								<% if(process.env.APP_CRUD === 'R' || process.env.APP_CRUD === 'D') {%>
 									readonly
 								<% } else if(process.env.APP_CRUD === 'C' || process.env.APP_CRUD === 'U') {%>
 									requerid
 								<% } %>	
-								value="<%=turma[0].TUR_SERIE%>">
+								>
+									<option></option>
+									<% if(Series.length > 0) { %>
+										<% for(var i = 0; i < Series.length; i++) {%>
+											<option value=<%=Series[i].SER_ID%>
+												<% if(Series[i].SER_ID == turma[0].TUR_SERIE && process.env.APP_CRUD != 'C') {%>
+													selected
+												<% } %>
+												>
+												<%=Series[i].SER_DESCRICAO%> 
+											</option>
+										<% } %>
+									<% } %>
+								</select>
+								<!-- Bloco de notas-->
+
+
 							</div>
 							<div class="form-group col-md-4">
 								<label for="name">Letra: </label>
@@ -86,8 +114,11 @@
 								<% } else if(process.env.APP_CRUD === 'C' || process.env.APP_CRUD === 'U') {%>
 									requerid
 								<% } %>	
-								value="<%=turma[0].TUR_LETRA%>"
-								>
+								<% if(process.env.APP_CRUD === 'R' || process.env.APP_CRUD === 'U' || process.env.APP_CRUD === 'D') {%>
+									value="<%=turma[0].TUR_LETRA%>">
+								<% } else if(process.env.APP_CRUD === 'C') {%>
+									>
+								<% } %>	
 							</div>		
 						</div>
 						<button type="submit" class="btn btn-default">Cadastrar</button>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Login</title>
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- incluindo css -->
+		<link href="css/style.css" rel="stylesheet">
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" 
+						class="navbar-toggle collapsed" 
+						data-toggle="collapse" 
+						data-target="#navbar" 
+						aria-expanded="false" 
+						aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<img src="images/logo.png"/>
+					<label>
+						Login
+					</label>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					</ul>
+				</div>
+			</div>
+		</nav>
+        <div class="container">
+            <% if(validacao.length > 0) { %>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger">
+                            <strong>Atenção!</strong>
+                            <ul>
+                                <% for(var i = 0; i < validacao.length; i++) { %>
+                                    <li><%= validacao[i].msg %></li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="Stl_wrapper">
+                        <form action="/adm/logar" method="POST">
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="name">E-mail: </label>
+                                    <input type="number" 
+                                    class="form-control"
+                                    id="USR_EMAIL" 
+                                    name="USR_EMAIL"
+                                    <% if(validacao.length > 0) { %>
+                                        value="<%=usuario[0].USR_EMAIL%>">
+                                    <% } else {%>
+                                        >
+                                    <% } %>	
+                                </div>
+                            </div>	
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label for="name">Senha: </label>
+                                    <input type="password" 
+                                    class="form-control"
+                                    id="USR_SENHA" 
+                                    name="USR_SENHA"
+                                    requerid
+                                    >
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer font-small blue pt-4">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> Salvum </a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </body>
+</html>
