@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link href="css/style.css" rel="stylesheet">
 		<!-- favicon -->
-		<link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <style>
             body, html {
                 height: 100%;
@@ -55,48 +57,153 @@
                 font: 20px "Lato", sans-serif;
                 color: #111;
             }
+            /* Inicio Footer */
+            .header-font {
+                font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+                color: #fd1506;
+            }
+            .fa-facebook{
+                color:#3b5998;
+            }
+            .fa-linkedin{
+                color:#0077B5;
+            }
+            .fa-twitter{
+                color:#4099FF;
+            }
+            .fa-google{
+                color:#d34836;
+            }
+            .bg-primary {
+            background-color: #000 !important;
+            }
+
+            .bg-circle
+            {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            padding: 14px 4px;
+            color: #ececec;
+            text-align: center;
+            border-radius: 50%;
+            }
+
+            .bg-circle-outline
+            {
+            width: 50px;
+            height: 50px;
+            color:smoke;
+            padding: 8px 2px;
+            border: 2px solid;
+            border-color: smoke;
+            border-radius: 50%;
+            }
+
+
+            .bg-circle a, a:hover, .media a:focus
+            {
+            text-decoration: none !important;
+            outline: none;
+            color: #ececec;
+            }
+            .bg-circle-outline a, a:hover, .media a:focus
+            {
+            text-decoration: none !important;
+            outline: none;
+            color: #ececec;
+            }
+            .footer {
+                background: #EDEFF1;
+                height: auto;
+                padding-bottom: 30px;
+                position: relative;
+                width: 100%;
+                border-bottom: 1px solid #CCCCCC;
+                border-top: 1px solid #DDDDDD;
+            }
+            .footer p {
+                margin: 0;
+            }
+            .footer img {
+                max-width: 100%;
+            }
+            .footer h3 {
+                border-bottom: 1px solid #BAC1C8;
+                color: #54697E;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 27px;
+                padding: 40px 0 10px;
+                text-transform: uppercase;
+            }
+            .footer ul {
+                font-size: 13px;
+                list-style-type: none;
+                margin-left: 0;
+                padding-left: 0;
+                margin-top: 15px;
+                color: #7F8C8D;
+            }
+            .footer ul li a {
+                padding: 0 0 5px 0;
+                display: block;
+            }
+            .footer a {
+                color: #78828D
+            }
+            /* Fim Footer */
             /* Turn off parallax scrolling for tablets and phones */
             @media only screen and (max-device-width: 1024px) {
                 .bgimg-1, .bgimg-2, .bgimg-3 {
                     background-attachment: scroll;
                 }
             }
+            .fa.fa-navicon {
+                color:chocolate;
+            }        
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-		<nav class="navbar fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-                    <button type="button" 
-                        class="navbar-toggle collapsed" 
-                        data-toggle="collapse" 
-                        data-target="#navbar" 
-                        aria-expanded="false" 
-                        aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<img src="images/logo_site.png" />
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/">HOME</a></li>
-						<li><a href="/">casa</a></li>
-						<li><a href="/">inicio</a></li>
-						<li><a href="/">principal</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-        <div class="bgimg-1">
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-white p-4 fixed-top">
+                    <!--ul class="nav navbar-nav navbar-right"-->
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#seção1">
+                            SEÇÃO 1
+                        </a></li>
+                        <li><a href="#seção2">SEÇÃO 2</a></li>
+                        <li><a href="#seção3">SEÇÃO 3</a></li>
+                        <li><a href="#seção4">SEÇÃO 4</a></li>
+                        <li><a href="#contato">CONTATO</a></li>
+                        <li><a href="/login">LOGIN</a></li>
+                    <!--/ul-->
+                </div>
+            </div>
+            <nav class="navbar navbar-white bg-white fixed-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#navbarToggleExternalContent" 
+                    aria-controls="navbarToggleExternalContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-navicon"></i>
+                    </span>
+                </button>
+                <a href="#home">
+                    <img src="images/logo_site.png" />
+                </a>
+            </nav>
+        </div>
+
+        <div class="bgimg-1" id="home">
             <div class="caption">
                 <span class="border"> COLÉGIO  SALVUM </span>
             </div>
         </div>
-        <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+        <div id="seção1" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
             <h3 style="text-align:center;">Primeira Seção</h3>
             <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground 
                 content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis
@@ -109,85 +216,95 @@
                  porta porttitor placerat leo.
             </p>
         </div>
-        <div class="bgimg-2">
+        <div id="seção2" class="bgimg-2">
             <div class="caption">
-                <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+                <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                    Segunda Seção
+                </span>
             </div>
         </div>
         <div style="position:relative;">
             <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-                <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+                <p>Lorem ipsum odio purus molestie ligula habitasse per at eleifend conubia, nostra varius nibh lectus arcu praesent pellentesque mollis risus himenaeos. 
+                Inceptos aliquam convallis gravida sed nulla vel sollicitudin dui.</p>
             </div>
         </div>
-        <div class="bgimg-3">
+        <div id="seção3" class="bgimg-3">
             <div class="caption">
-                <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
-            </div>
+                <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+                    Terceira Seção
+                </span>
+            </div> 
         </div>
         <div style="position:relative;">
             <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-                <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+                <p>Lorem ipsum odio purus molestie ligula habitasse per at eleifend conubia. 
+                Nostra varius nibh lectus arcu praesent pellentesque mollis risus himenaeos, 
+                inceptos aliquam convallis gravida sed nulla vel sollicitudin dui.</p>
             </div>
         </div>
-        <div class="bgimg-1">
+        <div id="seção4" class="bgimg-1">
             <div class="caption">
-                <span class="border">COOL!</span>
+                <span class="border">QUARTA SEÇÃO!</span>
             </div>
         </div>
 
 <!-- Footer -->
-        <footer class="page-footer font-small cyan darken-3">
-            <!-- Footer Elements -->
-            <div class="container">
-                <!-- Grid row-->
-                <div class="row">
-                <!-- Grid column -->
-                    <div class="col-md-12 py-5">
-                        <div class="mb-5 flex-center">
-                            <!-- Facebook -->
-                            <a class="https://fb-ic">
-                                <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!-- Twitter -->
-                            <a class="https://tw-ic">
-                                <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!-- Google +-->
-                            <a class="https://gplus-ic">
-                                <i class="fa fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!--Linkedin -->
-                            <a class="https://li-ic">
-                                <i class="fa fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!--Instagram-->
-                            <a class="https://ins-ic">
-                                <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!--Pinterest-->
-                            <a class="https://pin-ic">
-                                <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
-                            </a>
+        <footer id="contato">
+            <div class="container-fluid bg-primary py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="row py-0">
+                                <div class="col-sm-1 hidden-md-down">
+                                    <a class="bg-circle bg-info" href="#">
+                                        <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
+                                    </a>
+                                </div>
+                                <div class="col-sm-11 text-white">
+                                    <div><h4>  Contato</h4>
+                                        <p>   salvum.com.br</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="d-inline-block">
+                                <div class="bg-circle-outline d-inline-block" 
+                                    style="background-color:#3b5998">
+                                    <a href="https://www.facebook.com/">
+                                        <i class="fa fa-2x fa-fw fa-facebook text-white"></i>
+                                    </a>
+                                </div>
+                                <div class="bg-circle-outline d-inline-block" 
+                                    style="background-color:#4099FF">
+                                    <a href="https://twitter.com/">
+                                        <i class="fa fa-2x fa-fw fa-twitter text-white"></i>
+                                    </a>
+                                </div>
+                                <div class="bg-circle-outline d-inline-block"
+                                style="background-image: linear-gradient(45deg, #FEDA77, #F58529, #DD2A7B, #8134AF, #515BD4);"> 
+                                    <a href="https://www.instagram.com/">
+                                        <i class="fa fa-2x fa-fw fa-instagram text-black"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                <!-- Grid column -->
                 </div>
-            <!-- Grid row-->
             </div>
-        <!-- Footer Elements -->
-        
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-            </div>
-            <!-- Copyright -->
-        
         </footer>
-      <!-- Footer -->
+     <!-- Footer -->
+        <script>
+            document.querySelectorAll('a').forEach(function (el) {
+                el.addEventListener('click', function(e){
+                    $('.collapse').collapse('hide');
+                });
+            });
+        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
-
     </body>
 </html>
 
